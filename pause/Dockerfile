@@ -1,6 +1,7 @@
-FROM almalinux as pause-build
+FROM almalinux:8 as pause-build
 RUN mkdir -p /mnt/rootfs; yum install --installroot /mnt/rootfs --releasever 8 --setopt install_weak_deps=false --nodocs -y gcc glibc-minimal-langpack
-ADD pause.c /mnt/rootfs/pause.c
+RUN curl -o /mnt/rootfs/pause.c -L https://raw.githubusercontent.com/kubernetes/kubernetes/master/build/pause/linux/pause.c
+# ADD pause.c /mnt/rootfs/pause.c
 RUN chroot /mnt/rootfs gcc -s -O2 -Wall /pause.c -o /pause
 
 FROM scratch AS pause
