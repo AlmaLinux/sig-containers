@@ -10,7 +10,7 @@ ENV PATH $JAVA_HOME/bin:$PATH
 RUN dnf install -y openssl fontconfig \
     && dnf clean all
 
-ENV JAVA_VERSION jdk-11.0.16+8
+ENV JAVA_VERSION jdk-11.0.16.1+1
 
 RUN set -eux; \
     ARCH="$(uname -m)"; \
