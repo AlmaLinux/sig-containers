@@ -16,20 +16,20 @@ RUN set -eux; \
     ARCH="$(uname -m)"; \
     case "${ARCH}" in \
        aarch64) \
-         ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94'; \
-         BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz'; \
+         ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090'; \
+         BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz'; \
          ;; \
        ppc64le) \
-         ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6'; \
-         BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz'; \
+         ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34'; \
+         BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz'; \
          ;; \
        s390x) \
-         ESUM='38f97a42440f50e9dc59638401d6ae3f730aff32ee95c82b26def68d9602f66b'; \
-         BINARY_URL='https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk8u345-b01_openj9-0.33.0/ibm-semeru-open-jre_s390x_linux_8u345b01_openj9-0.33.0.tar.gz'; \
+         ESUM='a87652c8150390777aa98bbe6452788522d01fd0a68ab3133663191a9cd32555'; \
+         BINARY_URL='https://github.com/AdoptOpenJDK/semeru8-binaries/releases/download/jdk8u345-b01_openj9-0.33.1/ibm-semeru-open-jdk_s390x_linux_8u345b01_openj9-0.33.1.tar.gz'; \
          ;; \          
        x86_64) \
-         ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a'; \
-         BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz'; \
+         ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58'; \
+         BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz'; \
          ;; \
        *) \
          echo "Unsupported arch: ${ARCH}"; \
